@@ -1,0 +1,6 @@
+C:\C4PAAV\C4LNegG3ContrerasMontesinos\bin\Debug\C4LNegG3ContrerasMontesinos.dll
+C:\C4PAAV\C4LNegG3ContrerasMontesinos\bin\Debug\C4LNegG3ContrerasMontesinos.pdb
+C:\C4PAAV\C4LNegG3ContrerasMontesinos\obj\Debug\C4LNegG3ContrerasMontesinos.csproj.AssemblyReference.cache
+C:\C4PAAV\C4LNegG3ContrerasMontesinos\obj\Debug\C4LNegG3ContrerasMontesinos.csproj.CoreCompileInputs.cache
+C:\C4PAAV\C4LNegG3ContrerasMontesinos\obj\Debug\C4LNegG3ContrerasMontesinos.dll
+C:\C4PAAV\C4LNegG3ContrerasMontesinos\obj\Debug\C4LNegG3ContrerasMontesinos.pdb

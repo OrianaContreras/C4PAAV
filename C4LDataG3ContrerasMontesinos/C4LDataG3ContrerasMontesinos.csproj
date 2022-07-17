@@ -55,12 +55,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_PAAC4G3ContrerasMontesinos.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB_PAAC4G3ContrerasMontesinos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_PAAC4G3ContrerasMontesinos.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB_PAAC4G3ContrerasMontesinos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_PAAC4G3ContrerasMontesinos.edmx</DependentUpon>
     </Compile>
+    <Compile Include="pa_mostrar_Result.cs">
+      <DependentUpon>DB_PAAC4G3ContrerasMontesinos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tblInventario.cs">
+      <DependentUpon>DB_PAAC4G3ContrerasMontesinos.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DB_PAAC4G3ContrerasMontesinos.edmx">
@@ -79,6 +90,12 @@
     <Content Include="DB_PAAC4G3ContrerasMontesinos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DB_PAAC4G3ContrerasMontesinos.Context.cs</LastGenOutput>
+      <DependentUpon>DB_PAAC4G3ContrerasMontesinos.edmx</DependentUpon>
+    </Content>
+    <Content Include="DB_PAAC4G3ContrerasMontesinos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_PAAC4G3ContrerasMontesinos.edmx</DependentUpon>
+      <LastGenOutput>DB_PAAC4G3ContrerasMontesinos.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
