@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_PAAC4G3ContrerasMontesinosModelStoreContainer" CdmEntityContainer="DB_PAAC4G3ContrerasMontesinos">
+    <EntitySetMapping Name="tblInventario">
+      <EntityTypeMapping TypeName="DB_PAAC4G3ContrerasMontesinosModel.tblInventario">
+        <MappingFragment StoreEntitySet="tblInventario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="seccion" ColumnName="seccion" />
+          <ScalarProperty Name="nombreArticulo" ColumnName="nombreArticulo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="etiquetado" ColumnName="etiquetado" />
+          <ScalarProperty Name="realizadoPor" ColumnName="realizadoPor" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="pa_eliminar" FunctionName="DB_PAAC4G3ContrerasMontesinosModel.Store.pa_eliminar" />
+    <FunctionImportMapping FunctionImportName="pa_ingresar" FunctionName="DB_PAAC4G3ContrerasMontesinosModel.Store.pa_ingresar" />
+    <FunctionImportMapping FunctionImportName="pa_modificar" FunctionName="DB_PAAC4G3ContrerasMontesinosModel.Store.pa_modificar" />
+    <FunctionImportMapping FunctionImportName="pa_mostrar" FunctionName="DB_PAAC4G3ContrerasMontesinosModel.Store.pa_mostrar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_PAAC4G3ContrerasMontesinosModel.pa_mostrar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="seccion" ColumnName="seccion" />
+          <ScalarProperty Name="nombreArticulo" ColumnName="nombreArticulo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="etiquetado" ColumnName="etiquetado" />
+          <ScalarProperty Name="realizadoPor" ColumnName="realizadoPor" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

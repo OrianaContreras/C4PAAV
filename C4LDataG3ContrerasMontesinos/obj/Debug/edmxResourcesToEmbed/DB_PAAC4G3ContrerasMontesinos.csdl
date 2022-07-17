@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_PAAC4G3ContrerasMontesinosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblInventario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="seccion" Type="Int32" Nullable="false" />
+    <Property Name="nombreArticulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="etiquetado" Type="Boolean" Nullable="false" />
+    <Property Name="realizadoPor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="eliminado" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DB_PAAC4G3ContrerasMontesinos" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblInventario" EntityType="Self.tblInventario" />
+    <FunctionImport Name="pa_eliminar">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="eliminado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ingresar">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="seccion" Mode="In" Type="Int32" />
+      <Parameter Name="nombreArticulo" Mode="In" Type="String" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+      <Parameter Name="etiquetado" Mode="In" Type="Boolean" />
+      <Parameter Name="realizadoPor" Mode="In" Type="String" />
+      <Parameter Name="eliminado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="pa_modificar">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="seccion" Mode="In" Type="Int32" />
+      <Parameter Name="nombreArticulo" Mode="In" Type="String" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+      <Parameter Name="etiquetado" Mode="In" Type="Boolean" />
+      <Parameter Name="realizadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pa_mostrar" ReturnType="Collection(DB_PAAC4G3ContrerasMontesinosModel.pa_mostrar_Result)">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="pa_mostrar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="codigo" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="seccion" Nullable="false" />
+    <Property Type="String" Name="nombreArticulo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+    <Property Type="Boolean" Name="etiquetado" Nullable="false" />
+    <Property Type="String" Name="realizadoPor" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="eliminado" Nullable="false" />
+  </ComplexType>
+</Schema>

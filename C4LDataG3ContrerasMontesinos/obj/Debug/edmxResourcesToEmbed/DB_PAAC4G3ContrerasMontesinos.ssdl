@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_PAAC4G3ContrerasMontesinosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblInventario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="int" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="seccion" Type="int" Nullable="false" />
+    <Property Name="nombreArticulo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="etiquetado" Type="bit" Nullable="false" />
+    <Property Name="realizadoPor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <Function Name="pa_eliminar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="eliminado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="pa_ingresar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="seccion" Type="int" Mode="In" />
+    <Parameter Name="nombreArticulo" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+    <Parameter Name="etiquetado" Type="bit" Mode="In" />
+    <Parameter Name="realizadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="eliminado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="pa_modificar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="seccion" Type="int" Mode="In" />
+    <Parameter Name="nombreArticulo" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+    <Parameter Name="etiquetado" Type="bit" Mode="In" />
+    <Parameter Name="realizadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_mostrar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="DB_PAAC4G3ContrerasMontesinosModelStoreContainer">
+    <EntitySet Name="tblInventario" EntityType="Self.tblInventario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

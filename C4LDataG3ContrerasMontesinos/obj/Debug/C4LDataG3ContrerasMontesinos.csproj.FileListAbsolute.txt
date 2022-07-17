@@ -1,0 +1,14 @@
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\C4LDataG3ContrerasMontesinos.dll.config
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\C4LDataG3ContrerasMontesinos.dll
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\C4LDataG3ContrerasMontesinos.pdb
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\C4LNegG3ContrerasMontesinos.dll
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\EntityFramework.dll
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\EntityFramework.SqlServer.dll
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\C4LNegG3ContrerasMontesinos.pdb
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\EntityFramework.xml
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\bin\Debug\EntityFramework.SqlServer.xml
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\obj\Debug\C4LDataG3ContrerasMontesinos.csproj.AssemblyReference.cache
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\obj\Debug\C4LDataG3ContrerasMontesinos.csproj.CoreCompileInputs.cache
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\obj\Debug\C4LDataG3ContrerasMontesinos.csproj.CopyComplete
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\obj\Debug\C4LDataG3ContrerasMontesinos.dll
+C:\C4PAAV\C4LDataG3ContrerasMontesinos\obj\Debug\C4LDataG3ContrerasMontesinos.pdb

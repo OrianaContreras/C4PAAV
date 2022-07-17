@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using C4LDataG3ContrerasMontesinos;
 
 namespace C4LNegG3ContrerasMontesinos
 {
@@ -33,34 +34,34 @@ namespace C4LNegG3ContrerasMontesinos
 
         #region operaciones
 
-        //public bool ingresar(Inventario objInventario)
-        //{
-        //    BaseDato objDB = new BaseDato();
-        //    bool result = objDB.ingresar(objInventario);
-        //    return result;
-        //}// fin ingresar
+        public bool ingresar(Inventario objInventario)
+        {
+            BaseDato objDB = new BaseDato();
+            bool result = objDB.ingresar(objInventario);
+            return result;
+        }// fin ingresar
 
-        //public List<Inventario> mostrar(Inventario objInventario)
-        //{
-        //    BaseDato objDB = new BaseDato();
-        //    List<Inventario> inventarios = objDB.mostrar(objInventario);
-        //    return inventarios;
-        //}// fin mostrar
+        public List<Inventario> mostrar(Inventario objInventario)
+        {
+            BaseDato objDB = new BaseDato();
+            List<Inventario> inventarios = objDB.mostrar(objInventario);
+            return inventarios;
+        }// fin mostrar
 
-        //public bool modificar(Inventario objInventario)
-        //{
-        //    BaseDato objDB = new BaseDato();
-        //    bool result = objDB.modificar(objInventario);
-        //    return result;
-        //}// fin modificar
+        public bool modificar(Inventario objInventario)
+        {
+            BaseDato objDB = new BaseDato();
+            bool result = objDB.modificar(objInventario);
+            return result;
+        }// fin modificar
 
-        //public bool eliminar(Inventario objInventario)
-        //{
-        //    BaseDato objDB = new BaseDato();
-        //    objInventario.Eliminado = true;
-        //    bool result = objDB.eliminar(objInventario);
-        //    return result;
-        //}// fin eliminar
+        public bool eliminar(Inventario objInventario)
+        {
+            BaseDato objDB = new BaseDato();
+            objInventario.Eliminado = true;
+            bool result = objDB.eliminar(objInventario);
+            return result;
+        }// fin eliminar
 
         #endregion
 
