@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_PAAC4G3ContrerasMontesinosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblInventario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="codigo" Type="int" Nullable="false" />
+          <Property Name="fecha" Type="datetime" Nullable="false" />
+          <Property Name="seccion" Type="int" Nullable="false" />
+          <Property Name="nombreArticulo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="etiquetado" Type="bit" Nullable="false" />
+          <Property Name="realizadoPor" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="eliminado" Type="bit" Nullable="false" />
+        </EntityType>
+        <Function Name="pa_eliminar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="int" Mode="In" />
+          <Parameter Name="eliminado" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="pa_ingresar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="int" Mode="In" />
+          <Parameter Name="fecha" Type="datetime" Mode="In" />
+          <Parameter Name="seccion" Type="int" Mode="In" />
+          <Parameter Name="nombreArticulo" Type="varchar" Mode="In" />
+          <Parameter Name="estado" Type="varchar" Mode="In" />
+          <Parameter Name="etiquetado" Type="bit" Mode="In" />
+          <Parameter Name="realizadoPor" Type="varchar" Mode="In" />
+          <Parameter Name="eliminado" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="pa_modificar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="codigo" Type="int" Mode="In" />
+          <Parameter Name="fecha" Type="datetime" Mode="In" />
+          <Parameter Name="seccion" Type="int" Mode="In" />
+          <Parameter Name="nombreArticulo" Type="varchar" Mode="In" />
+          <Parameter Name="estado" Type="varchar" Mode="In" />
+          <Parameter Name="etiquetado" Type="bit" Mode="In" />
+          <Parameter Name="realizadoPor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pa_mostrar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="DB_PAAC4G3ContrerasMontesinosModelStoreContainer">
+          <EntitySet Name="tblInventario" EntityType="Self.tblInventario" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_PAAC4G3ContrerasMontesinosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblInventario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codigo" Type="Int32" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="seccion" Type="Int32" Nullable="false" />
+          <Property Name="nombreArticulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="etiquetado" Type="Boolean" Nullable="false" />
+          <Property Name="realizadoPor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="eliminado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_PAAC4G3ContrerasMontesinos" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblInventario" EntityType="Self.tblInventario" />
+          <FunctionImport Name="pa_eliminar">
+            <Parameter Name="codigo" Mode="In" Type="Int32" />
+            <Parameter Name="eliminado" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="pa_ingresar">
+            <Parameter Name="codigo" Mode="In" Type="Int32" />
+            <Parameter Name="fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="seccion" Mode="In" Type="Int32" />
+            <Parameter Name="nombreArticulo" Mode="In" Type="String" />
+            <Parameter Name="estado" Mode="In" Type="String" />
+            <Parameter Name="etiquetado" Mode="In" Type="Boolean" />
+            <Parameter Name="realizadoPor" Mode="In" Type="String" />
+            <Parameter Name="eliminado" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="pa_modificar">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="codigo" Mode="In" Type="Int32" />
+            <Parameter Name="fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="seccion" Mode="In" Type="Int32" />
+            <Parameter Name="nombreArticulo" Mode="In" Type="String" />
+            <Parameter Name="estado" Mode="In" Type="String" />
+            <Parameter Name="etiquetado" Mode="In" Type="Boolean" />
+            <Parameter Name="realizadoPor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pa_mostrar" ReturnType="Collection(DB_PAAC4G3ContrerasMontesinosModel.pa_mostrar_Result)">
+            <Parameter Name="codigo" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="pa_mostrar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="codigo" Nullable="false" />
+          <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="seccion" Nullable="false" />
+          <Property Type="String" Name="nombreArticulo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="estado" Nullable="false" MaxLength="20" />
+          <Property Type="Boolean" Name="etiquetado" Nullable="false" />
+          <Property Type="String" Name="realizadoPor" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="eliminado" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_PAAC4G3ContrerasMontesinosModelStoreContainer" CdmEntityContainer="DB_PAAC4G3ContrerasMontesinos">
+          <EntitySetMapping Name="tblInventario">
+            <EntityTypeMapping TypeName="DB_PAAC4G3ContrerasMontesinosModel.tblInventario">
+              <MappingFragment StoreEntitySet="tblInventario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="seccion" ColumnName="seccion" />
+                <ScalarProperty Name="nombreArticulo" ColumnName="nombreArticulo" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="etiquetado" ColumnName="etiquetado" />
+                <ScalarProperty Name="realizadoPor" ColumnName="realizadoPor" />
+                <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="pa_eliminar" FunctionName="DB_PAAC4G3ContrerasMontesinosModel.Store.pa_eliminar" />
+          <FunctionImportMapping FunctionImportName="pa_ingresar" FunctionName="DB_PAAC4G3ContrerasMontesinosModel.Store.pa_ingresar" />
+          <FunctionImportMapping FunctionImportName="pa_modificar" FunctionName="DB_PAAC4G3ContrerasMontesinosModel.Store.pa_modificar" />
+          <FunctionImportMapping FunctionImportName="pa_mostrar" FunctionName="DB_PAAC4G3ContrerasMontesinosModel.Store.pa_mostrar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_PAAC4G3ContrerasMontesinosModel.pa_mostrar_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="seccion" ColumnName="seccion" />
+                <ScalarProperty Name="nombreArticulo" ColumnName="nombreArticulo" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="etiquetado" ColumnName="etiquetado" />
+                <ScalarProperty Name="realizadoPor" ColumnName="realizadoPor" />
+                <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
