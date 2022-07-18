@@ -13,7 +13,7 @@ public partial class Eliminar : System.Web.UI.Page
 
     }
 
-    protected void btnBuscar_Click(object sender, EventArgs e)
+    protected void btnEliminar_Click(object sender, EventArgs e)
     {
 
         Inventario objInventario = new Inventario();

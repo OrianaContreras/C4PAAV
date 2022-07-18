@@ -27,7 +27,18 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table class="auto-style15">
         <tr>
-            <td class="auto-style12" colspan="3"><strong>Formulario </strong>Eliminar</td>
+            <td class="auto-style12" colspan="3">
+                <h2><strong>Formulario Eliminar</strong></h2>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style13">&nbsp;</td>
+            <td>
+                <strong>
+                <asp:Label ID="lblMensaje" runat="server" Text=" lblMensaje" Width="600px" Height="16px" Visible="False"></asp:Label>
+                </strong>
+            </td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -35,7 +46,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>Código</td>
+            <td><strong>Código</strong></td>
             <td class="auto-style13"><strong>:</strong></td>
             <td>
                 <asp:TextBox ID="txtCodigo" runat="server"></asp:TextBox>
@@ -54,8 +65,7 @@
             <td class="auto-style11">&nbsp;</td>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style11">
-                <asp:Label ID="lblMensaje" runat="server" Text=" " Width="600px"></asp:Label>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style11">&nbsp;</td>
@@ -68,7 +78,7 @@
             <td class="auto-style11">&nbsp;</td>
             <td class="auto-style14">&nbsp;</td>
             <td class="auto-style11">
-                <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Buscar" />
+                <asp:Button ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" />
             </td>
         </tr>
     </table>

@@ -20,12 +20,26 @@ public partial class Listar : System.Web.UI.Page
         {
             objInventario.Codigo = int.Parse(txtCodigo.Text);
             var lista = objInventario.mostrar(objInventario);
-            dgMostrar.DataSource = lista;
-            dgMostrar.DataBind();
+            bool noTieneError = String.IsNullOrEmpty(objInventario.Mensaje);
+
+            if (noTieneError)
+            {
+                lblMensaje.Text = "";
+                lblMensaje.Visible = false;
+                dgMostrar.DataSource = lista;
+                dgMostrar.DataBind();
+            }
+            else
+            {
+                lblMensaje.Text = "Error al buscar los datos \n...." + objInventario.Mensaje;
+                lblMensaje.Visible = true;
+            }
+
         }
         catch
         {
-            Console.WriteLine("Favor ingrese un código válido");
+            lblMensaje.Text = "Favor ingrese un código válido";
+            lblMensaje.Visible = true;
         }
        
     }

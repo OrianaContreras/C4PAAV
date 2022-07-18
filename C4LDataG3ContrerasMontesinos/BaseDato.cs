@@ -27,7 +27,7 @@ namespace C4LDataG3ContrerasMontesinos
             }
             catch (Exception error)
             {
-                Console.WriteLine(error.ToString());
+                objInventario.Mensaje = "Excepcion Capturada: {0} " + error.ToString();
             }
             return proceso;
         }
@@ -59,7 +59,7 @@ namespace C4LDataG3ContrerasMontesinos
             }
             catch (Exception error)
             {
-                Console.WriteLine(error.ToString());
+                objInventario.Mensaje = "Excepcion Capturada: {0} " + error.ToString();
             }
             return lista;
         }
@@ -78,7 +78,7 @@ namespace C4LDataG3ContrerasMontesinos
             }
             catch (Exception error)
             {
-                Console.WriteLine(error.ToString());
+                objInventario.Mensaje = "Excepcion Capturada: {0} " + error.ToString();
             }
             return proceso;
         }
@@ -97,7 +97,7 @@ namespace C4LDataG3ContrerasMontesinos
             }
             catch (Exception error)
             {
-                Console.WriteLine(error.ToString());
+                objInventario.Mensaje = "Excepcion Capturada: {0} " + error.ToString();
             }
             return proceso;
         }

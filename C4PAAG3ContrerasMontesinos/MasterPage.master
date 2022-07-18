@@ -54,7 +54,7 @@
                                 <tr>
                                     <td>Inventario</td>
                                     <td>
-                                        <asp:Button ID="btnLogOut" runat="server" OnClick="btnLogOut_Click" Text="LogOut" />
+                                        <asp:Button ID="btnLogOut" runat="server" OnClick="btnLogOut_Click" Text="LogOut"/>   
                                     </td>
                                 </tr>
                                 </table>

@@ -42,6 +42,13 @@
     .auto-style10 {
         height: 42px;
     }
+        .auto-style18 {
+            height: 23px;
+            width: 300px;
+        }
+        .auto-style19 {
+            height: 23px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -50,7 +57,25 @@
         <td class="auto-style3" colspan="3"><strong>Formulario Actualizar </strong> </td>
     </tr>
     <tr>
-        <td>ID</td>
+        <td class="auto-style3" colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="auto-style19"></td>
+        <td class="auto-style15"></td>
+        <td class="auto-style19">
+            <strong>
+            <asp:Label ID="lblMensaje" runat="server" Text="lblMensaje " Visible="False"></asp:Label>
+            </strong>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style19">&nbsp;</td>
+        <td class="auto-style15">&nbsp;</td>
+        <td class="auto-style19">
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td><strong>ID</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtId" runat="server" Width="200px"></asp:TextBox>
@@ -59,14 +84,14 @@
         </td>
     </tr>
     <tr>
-        <td>&nbsp;</td>
+        <td><strong></strong></td>
         <td class="auto-style17">&nbsp;</td>
         <td>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtId" ErrorMessage="RequiredFieldValidator" Font-Bold="True" Font-Italic="True" ForeColor="Red">Este campo es obligatorio.</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Código</td>
+        <td style="width: 200px"><strong>Código</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtCodigo" runat="server" Width="200px"></asp:TextBox>
@@ -74,14 +99,14 @@
 &nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 200px">&nbsp;</td>
+        <td style="width: 200px"><strong></strong></td>
         <td class="auto-style17">&nbsp;</td>
         <td>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCodigo" ErrorMessage="RequiredFieldValidator" Font-Bold="True" Font-Italic="True" ForeColor="Red">Este campo es obligatorio.</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Fecha</td>
+        <td style="width: 200px"><strong>Fecha</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:Calendar ID="Calendar1" runat="server" CssClass="auto-style16"></asp:Calendar>
@@ -94,7 +119,7 @@
         <td class="auto-style7">&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 200px">Sección</td>
+        <td style="width: 200px"><strong>Sección</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtSeccion" runat="server" Width="200px"></asp:TextBox>
@@ -102,28 +127,28 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">&nbsp;</td>
+        <td style="width: 200px"><strong></strong></td>
         <td class="auto-style17">&nbsp;</td>
         <td>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSeccion" ErrorMessage="RequiredFieldValidator" Font-Bold="True" Font-Italic="True" ForeColor="Red">Este campo es obligatorio.</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Nombre Artículo</td>
+        <td style="width: 200px"><strong>Nombre Artículo</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtNombreArticulo" runat="server" Width="200px"></asp:TextBox>
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">&nbsp;</td>
+        <td style="width: 200px"><strong></strong></td>
         <td class="auto-style17">&nbsp;</td>
         <td>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtNombreArticulo" ErrorMessage="RequiredFieldValidator" Font-Bold="True" Font-Italic="True" ForeColor="Red">Este campo es obligatorio.</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Estado</td>
+        <td style="width: 200px"><strong>Estado</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtEstado" runat="server" Width="200px"></asp:TextBox>
@@ -137,7 +162,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Etiquetado</td>
+        <td style="width: 200px"><strong>Etiquetado</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:DropDownList ID="ddlEtiquetado" runat="server" Width="200px">
@@ -154,7 +179,7 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style8">Realizado Por</td>
+        <td class="auto-style8"><strong>Realizado Por</strong></td>
         <td class="auto-style9">:</td>
         <td class="auto-style10">
             <asp:TextBox ID="txtRealizadoPor" runat="server" Width="200px"></asp:TextBox>
@@ -168,16 +193,11 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style7"></td>
+        <td class="auto-style18"></td>
         <td class="auto-style15"></td>
-        <td class="auto-style7">
-            <asp:Label ID="lblMensaje" runat="server" Text=" " Visible="False"></asp:Label>
+        <td class="auto-style18">
+            
         </td>
-    </tr>
-    <tr>
-        <td class="auto-style7"></td>
-        <td class="auto-style15"></td>
-        <td class="auto-style7"></td>
     </tr>
     <tr>
         <td>&nbsp;</td>

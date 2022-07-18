@@ -26,6 +26,9 @@
             text-align: center;
             font-size: x-large;
         }
+        .auto-style17 {
+        margin-bottom: 0px;
+    }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -36,10 +39,17 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style13">&nbsp;</td>
+            <td><strong>
+                <asp:Label ID="lblMensaje" runat="server" Width="600px" CssClass="auto-style17" Visible="False"></asp:Label>
+                </strong></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style13">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>Código</td>
+            <td><strong>Código</strong></td>
             <td class="auto-style13"><strong>:</strong></td>
             <td>
                 <asp:TextBox ID="txtCodigo" runat="server"></asp:TextBox>
@@ -56,16 +66,9 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style14">&nbsp;</td>
-            <td class="auto-style11">
-                <asp:Label ID="lblMensaje" runat="server" Width="600px"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style14">&nbsp;</td>
-            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style11"></td>
+            <td class="auto-style14"></td>
+            <td class="auto-style11"></td>
         </tr>
         <tr>
             <td class="auto-style11">&nbsp;</td>

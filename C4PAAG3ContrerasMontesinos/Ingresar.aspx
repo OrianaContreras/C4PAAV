@@ -10,7 +10,7 @@
         height: 42px;
     }
     .auto-style9 {
-        width: 10px;
+        width: 8px;
         height: 42px;
     }
     .auto-style10 {
@@ -21,7 +21,7 @@
         height: 26px;
     }
     .auto-style12 {
-        width: 10px;
+        width: 8px;
         height: 26px;
     }
     .auto-style13 {
@@ -32,14 +32,14 @@
         height: 23px;
     }
     .auto-style15 {
-        width: 10px;
+        width: 8px;
         height: 23px;
     }
     .auto-style16 {
         margin-right: 0px;
     }
     .auto-style17 {
-        width: 10px;
+        width: 8px;
     }
         .auto-style18 {
             height: 23px;
@@ -49,7 +49,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table class="auto-style1">
     <tr>
-        <td class="auto-style3" colspan="3">Formulario Ingresar </td>
+        <td class="auto-style3" colspan="3">
+            <h2><strong>Formulario Ingresar </strong></h2>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td class="auto-style17">&nbsp;</td>
+        <td><strong>
+            <asp:Label ID="lblMensaje" runat="server" Text="Label" Visible="False"></asp:Label>
+            </strong></td>
     </tr>
     <tr>
         <td>&nbsp;</td>
@@ -57,7 +66,7 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td style="width: 200px">Código</td>
+        <td style="width: 200px"><strong>Código</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtCodigo" runat="server" Width="200px"></asp:TextBox>
@@ -72,7 +81,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Fecha</td>
+        <td style="width: 200px"><strong>Fecha</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:Calendar ID="Calendar1" runat="server" CssClass="auto-style16"></asp:Calendar>
@@ -86,7 +95,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Sección</td>
+        <td style="width: 200px"><strong>Sección</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtSeccion" runat="server" Width="200px"></asp:TextBox>
@@ -94,14 +103,14 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">&nbsp;</td>
+        <td style="width: 200px"><strong></strong></td>
         <td class="auto-style17">&nbsp;</td>
         <td>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSeccion" ErrorMessage="RequiredFieldValidator" Font-Bold="True" Font-Italic="True" ForeColor="Red">Este campo es obligatorio.</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Nombre Artículo</td>
+        <td style="width: 200px"><strong>Nombre Artículo</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtNombreArticulo" runat="server" Width="200px"></asp:TextBox>
@@ -115,7 +124,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Estado</td>
+        <td style="width: 200px"><strong>Estado</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:TextBox ID="txtEstado" runat="server" Width="200px"></asp:TextBox>
@@ -129,7 +138,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 200px">Etiquetado</td>
+        <td style="width: 200px"><strong>Etiquetado</strong></td>
         <td class="auto-style17">:</td>
         <td>
             <asp:DropDownList ID="ddlEtiquetado" runat="server" Width="200px">
@@ -146,7 +155,7 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style8">Realizado Por</td>
+        <td class="auto-style8"><strong>Realizado Por</strong></td>
         <td class="auto-style9">:</td>
         <td class="auto-style10">
             <asp:TextBox ID="txtRealizadoPor" runat="server" Width="200px"></asp:TextBox>
@@ -163,13 +172,7 @@
         <td class="auto-style7"></td>
         <td class="auto-style15"></td>
         <td class="auto-style7">
-            <asp:Label ID="lblMensaje" runat="server" Text="Label" Visible="False"></asp:Label>
-        </td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td class="auto-style17">&nbsp;</td>
-        <td>&nbsp;</td>
+            &nbsp;</td>
     </tr>
     <tr>
         <td>&nbsp;</td>
@@ -180,6 +183,11 @@
             <asp:Button ID="btnLimpiar" runat="server" OnClick="btnLimpiar_Click" Text="Limpiar" />
         </td>
     </tr>
-</table>
+    <tr>
+        <td>&nbsp;</td>
+        <td class="auto-style17">&nbsp;</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+    </tr>
+    </table>
 </asp:Content>
 
