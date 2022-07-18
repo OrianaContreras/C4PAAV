@@ -32,7 +32,6 @@ public partial class Eliminar : System.Web.UI.Page
         
         if (!tieneError)
         {
-            objInventario.eliminar(objInventario);
             bool noTieneError = objInventario.eliminar(objInventario);
 
             if (noTieneError)
