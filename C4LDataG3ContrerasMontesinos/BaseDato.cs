@@ -45,13 +45,14 @@ namespace C4LDataG3ContrerasMontesinos
                         Inventario inventario = new Inventario();
                         inventario.Id = elemento.id;
                         inventario.Codigo = elemento.codigo;
-                        inventario.Eliminado = elemento.eliminado;
+                        inventario.Fecha = elemento.fecha;
+                        inventario.Seccion = elemento.seccion;
+                        inventario.NombreArticulo = elemento.nombreArticulo;
                         inventario.Estado = elemento.estado;
                         inventario.Etiquetado = elemento.etiquetado;
-                        inventario.Fecha = elemento.fecha;
-                        inventario.NombreArticulo = elemento.nombreArticulo;
                         inventario.RealizadoPor = elemento.realizadoPor;
-                        inventario.Seccion = elemento.seccion;
+                        inventario.Eliminado = elemento.eliminado;
+
                         lista.Add(inventario);
                     }
                 }
